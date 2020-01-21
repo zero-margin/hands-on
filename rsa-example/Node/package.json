@@ -1,0 +1,31 @@
+{
+  "name": "rsa-example",
+  "version": "1.0.0",
+  "description": "Sample RSA Implementation",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:server": "babel-node -- server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zero-margin/hands-on.git"
+  },
+  "keywords": [
+    "RSA"
+  ],
+  "author": "Zero Margin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zero-margin/hands-on/issues"
+  },
+  "homepage": "https://github.com/zero-margin/hands-on#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/node": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "node-forge": "^0.9.1",
+    "node-rsa": "^1.0.7"
+  }
+}
