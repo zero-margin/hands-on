@@ -1,0 +1,68 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/saurav/workspace/hands-on/rsa-example/DotNetCore/DotNetCore.csproj": {}
+  },
+  "projects": {
+    "/Users/saurav/workspace/hands-on/rsa-example/DotNetCore/DotNetCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/saurav/workspace/hands-on/rsa-example/DotNetCore/DotNetCore.csproj",
+        "projectName": "DotNetCore",
+        "projectPath": "/Users/saurav/workspace/hands-on/rsa-example/DotNetCore/DotNetCore.csproj",
+        "packagesPath": "/Users/saurav/.nuget/packages/",
+        "outputPath": "/Users/saurav/workspace/hands-on/rsa-example/DotNetCore/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/saurav/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "BouncyCastle.NetCore": {
+              "target": "Package",
+              "version": "[1.8.5, )"
+            },
+            "System.Security.Cryptography.Algorithms": {
+              "target": "Package",
+              "version": "[4.3.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.101/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

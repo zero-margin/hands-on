@@ -49,7 +49,7 @@ class RSA_Cipher:
 cipher = RSA_Cipher()
 # cipher.generate_key(1024) #key length can be 1024, 2048 or 4096
 #encryptedData = cipher.encrypt("This is test")
-encryptedData='ulSFKYGNaCnwLaQyNFDdsPXgtK6vu2ayX8rhxJg3vstll1p5O7QZRXs5Kz5dwbTVbQgQdEg/rTn4XEOe56hkyXnttb/gN/V2pUf1gblWES51/447XCRHeJom3hEcult49ho4J6DnPeyBIUtIwoDDUImCBSn7xu4SiQ1ayhH1l4TqBa+nCDEbyyENGrD/xMcdAE6nbJ3bkWBxcOhe+kfm0k/BQEUHTGSEThpxzV4sLFkbNx/mKjLOazjnxL/A204Un62UzI+o7sksh7cL1Uc27W3Tqs/D6JWbyxsgh15PdwcurFzRW+yPNEFu6bxibHDAOeg4OfFbEDXJYJjG975r4Q=='
+encryptedData='w+MSxokArEes19bV0I9Hudv7i+0SkGVVBtRI+WBuAIixyCpfumctiJaBr6RKtcCSOSSjkwevndOgFWxqUOpUVdt5g8qTrGiTxV8mJYcZavadFsWLpl/yztlw6fjq81WDyNYg9RIjbzJp7D+QjO2bAfjmHraE9H0d2SB3xE+Yv0IzrNImLywW4K4ohB3Xl9sow7SQGjQFv03CaJ2bmCCewCO7SiD/0ncIU+xYpgreWMHREoxUUtrf58EuUV6OCKelnKu/gKFEdkzajdcz8QHonRC3jcOtSEb8MCER8Rs0aZcqF/Zsyo5Wjd7L4L9GiMtVpNdEJprNVyPV8BBbfaz8yw=='
 decryptedData = cipher.decrypt(encryptedData)
 # print(encryptedData)
 print(decryptedData)

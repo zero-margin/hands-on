@@ -1,0 +1,13 @@
+/Users/saurav/workspace/hands-on/rsa-example/DotNetCore/bin/Debug/netcoreapp3.1/DotNetCore
+/Users/saurav/workspace/hands-on/rsa-example/DotNetCore/bin/Debug/netcoreapp3.1/DotNetCore.deps.json
+/Users/saurav/workspace/hands-on/rsa-example/DotNetCore/bin/Debug/netcoreapp3.1/DotNetCore.runtimeconfig.json
+/Users/saurav/workspace/hands-on/rsa-example/DotNetCore/bin/Debug/netcoreapp3.1/DotNetCore.runtimeconfig.dev.json
+/Users/saurav/workspace/hands-on/rsa-example/DotNetCore/bin/Debug/netcoreapp3.1/DotNetCore.dll
+/Users/saurav/workspace/hands-on/rsa-example/DotNetCore/bin/Debug/netcoreapp3.1/DotNetCore.pdb
+/Users/saurav/workspace/hands-on/rsa-example/DotNetCore/bin/Debug/netcoreapp3.1/BouncyCastle.Crypto.dll
+/Users/saurav/workspace/hands-on/rsa-example/DotNetCore/obj/Debug/netcoreapp3.1/DotNetCore.csprojAssemblyReference.cache
+/Users/saurav/workspace/hands-on/rsa-example/DotNetCore/obj/Debug/netcoreapp3.1/DotNetCore.AssemblyInfoInputs.cache
+/Users/saurav/workspace/hands-on/rsa-example/DotNetCore/obj/Debug/netcoreapp3.1/DotNetCore.AssemblyInfo.cs
+/Users/saurav/workspace/hands-on/rsa-example/DotNetCore/obj/Debug/netcoreapp3.1/DotNetCore.csproj.CopyComplete
+/Users/saurav/workspace/hands-on/rsa-example/DotNetCore/obj/Debug/netcoreapp3.1/DotNetCore.dll
+/Users/saurav/workspace/hands-on/rsa-example/DotNetCore/obj/Debug/netcoreapp3.1/DotNetCore.pdb
