@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Text;
 using System.IO;
+using System.Text.Encodings;
 using Org.BouncyCastle.Crypto;
 using Org.BouncyCastle.Crypto.Parameters;
 using Org.BouncyCastle.OpenSsl;
@@ -14,12 +15,11 @@ namespace DotNetCore
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
             RunEncryption("This is test data", false);
         }
         
         public static RSACryptoServiceProvider PrivateKeyFromPemFile (String filePath){ 
-            using (TextReader privateKeyTextReader = new StringReader(File.ReadAllText(filePath)))  
+            using (TextReader privateKeyTextReader = new StringReader(File.ReadAllText(filePath, Encoding.UTF8)))  
             {  
                 AsymmetricCipherKeyPair readKeyPair = (AsymmetricCipherKeyPair)new PemReader(privateKeyTextReader).ReadObject();  
                 RsaPrivateCrtKeyParameters privateKeyParams = ((RsaPrivateCrtKeyParameters)readKeyPair.Private);  
@@ -41,7 +41,7 @@ namespace DotNetCore
         }
 
          public static RSACryptoServiceProvider PublicKeyFromPemFile(String filePath){  
-            using (TextReader publicKeyTextReader = new StringReader(File.ReadAllText(filePath)))  
+            using (TextReader publicKeyTextReader = new StringReader(File.ReadAllText(filePath,Encoding.UTF8)))  
             {  
                 RsaKeyParameters publicKeyParam = (RsaKeyParameters)new PemReader(publicKeyTextReader).ReadObject();  
                 RSACryptoServiceProvider cryptoServiceProvider = new RSACryptoServiceProvider();  
@@ -56,15 +56,18 @@ namespace DotNetCore
         static public void RunEncryption(String input, bool DoOAEPPadding){  
         try  
             {
-                Encoding.UTF.GetString()
+                
                 UnicodeEncoding ByteConverter = new UnicodeEncoding();
-                byte[] data = ByteConverter.GetBytes(input);
+                byte[] data = Encoding.UTF8.GetBytes(input);;
                 byte[] encryptedData;  
                 using (RSACryptoServiceProvider RSA = PublicKeyFromPemFile(@"./keys/public_key.pem"))  
                 {  
-                    // RSA.ImportParameters(RSAKey);  
+                     // RSA.ImportParameters(RSAKey);  
                     encryptedData = RSA.Encrypt(data, DoOAEPPadding); 
-                }   Console.WriteLine(ByteConverter.GetString(encryptedData));  
+                    Console.WriteLine(Convert.ToBase64String(encryptedData));
+                    // Console.WriteLine(encryptedData);
+                    // Console.WriteLine(Encoding.UTF8.GetString(encryptedData)); 
+                } 
                 }  
                 catch (CryptographicException e)  
                 {  
