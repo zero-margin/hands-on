@@ -1,0 +1,34 @@
+{
+  "name": "03_set_functions",
+  "version": "1.0.0",
+  "description": "Calling the update functions",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start:server": "babel-node -- server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zero-margin/hands-on.git"
+  },
+  "keywords": [
+    "web3",
+    "ethereum"
+  ],
+  "author": "Saurav",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zero-margin/hands-on/issues"
+  },
+  "homepage": "https://github.com/zero-margin/hands-on#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.3",
+    "@babel/node": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "chalk": "^3.0.0",
+    "ethereumjs-tx": "^2.1.2",
+    "web3": "^1.2.5-rc.0"
+  }
+}
