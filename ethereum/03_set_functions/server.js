@@ -26,7 +26,9 @@ async function CreateSignedTransaction(account, privateKey, contract ){
     let transactionCount = await web3.eth.getTransactionCount(account);
     console.log(transactionCount);
     const contractInstance = getContractObject(contract);
-    const method_data = contractInstance.methods.setData(133).encodeABI();
+    const method_data = contractInstance.methods.setData(15).encodeABI();
+
+    console.log(method_data);
 
     const txData = { 
             nonce: web3.utils.toHex(transactionCount), 
