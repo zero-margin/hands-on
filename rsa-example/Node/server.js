@@ -24,7 +24,8 @@ function encryptAndDecryptForge(data){
     const publicKey = fs.readFileSync(publicKeyPath,'utf-8');
 
     const key = forge.pki.publicKeyFromPem(publicKey);
-    const encrypted = forge.util.encode64(key.encrypt(data, 'RSA-OAEP', {
+    // RSAES-PKCS1-V1_5, RSA-OAEP
+    const encrypted = forge.util.encode64(key.encrypt(data, 'RSAES-PKCS1-V1_5', {
         md: forge.md.sha256.create(),
         mgf1: forge.mgf1.create()
     }));
@@ -34,7 +35,8 @@ function encryptAndDecryptForge(data){
     const privateKey = fs.readFileSync(privateKeyPath,'utf-8');
     const pkey = forge.pki.privateKeyFromPem(privateKey);
 
-    console.log(pkey.decrypt(forge.util.decode64(encrypted), 'RSA-OAEP', {
+    const encryptedData ='wZ9Iy3+Z6VawL6rzHN3KaFIHx31ZrINtNB2+uHgtFwnr9sn7deXKfeRRvcmIx2l0WViGkFWsbN7ZChycvYb9U7JzoihhCpqjDfSshq5u374ueE71fOTvIE+OG8zn0VkIgEmsnTol0z/WbdVuSzSWzaq79YE5tNReiOXHD5LXkytRrrIfMxiSv7MoQhRsL2tl5ZzTOyUoaYmEZeDQUrMNACZU5C48oMZEE2dJ+MwzkKG+CEeXHi2JRosygvcrcx8+Sniqs9oaI+cLuoZ6mbszIxzdX751rysbvSJmmtf8yj5OUEvs/pJZsQkmTXLUnzBOSVo1y0VH5/uk9znrvweXJw=='
+    console.log(pkey.decrypt(forge.util.decode64(encryptedData), 'RSAES-PKCS1-V1_5', {
         md: forge.md.sha256.create(),
         mgf1: forge.mgf1.create()
     }));
@@ -42,4 +44,4 @@ function encryptAndDecryptForge(data){
 
 
 // encryptAndDecryptStringWithRSA("This is test");
-encryptAndDecryptForge("This is second test");
+encryptAndDecryptForge("This is test");

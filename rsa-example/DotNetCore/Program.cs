@@ -15,14 +15,17 @@ namespace DotNetCore
     {
         static void Main(string[] args)
         {
-            RunEncryption("This is test data", false);
+            string data = RunEncryption("This is test data", false);
+            Console.WriteLine(data);
+            RunDecryption(data, false);
         }
         
         public static RSACryptoServiceProvider PrivateKeyFromPemFile (String filePath){ 
             using (TextReader privateKeyTextReader = new StringReader(File.ReadAllText(filePath, Encoding.UTF8)))  
             {  
-                AsymmetricCipherKeyPair readKeyPair = (AsymmetricCipherKeyPair)new PemReader(privateKeyTextReader).ReadObject();  
-                RsaPrivateCrtKeyParameters privateKeyParams = ((RsaPrivateCrtKeyParameters)readKeyPair.Private);  
+                // AsymmetricCipherKeyPair readKeyPair = (AsymmetricCipherKeyPair)new PemReader(privateKeyTextReader).ReadObject();  
+                // RsaPrivateCrtKeyParameters privateKeyParams = ((RsaPrivateCrtKeyParameters)readKeyPair.Private);  
+                RsaPrivateCrtKeyParameters privateKeyParams = (RsaPrivateCrtKeyParameters)new PemReader(privateKeyTextReader).ReadObject();
                 RSACryptoServiceProvider cryptoServiceProvider = new RSACryptoServiceProvider();  
                 RSAParameters parms = new RSAParameters();  
         
@@ -53,28 +56,36 @@ namespace DotNetCore
             }  
         }
 
-        static public void RunEncryption(String input, bool DoOAEPPadding){  
+        static public string RunEncryption(String input, bool DoOAEPPadding){  
+        String response="";
         try  
             {
                 
-                UnicodeEncoding ByteConverter = new UnicodeEncoding();
+                // UnicodeEncoding ByteConverter = new UnicodeEncoding();
                 byte[] data = Encoding.UTF8.GetBytes(input);;
                 byte[] encryptedData;  
                 using (RSACryptoServiceProvider RSA = PublicKeyFromPemFile(@"./keys/public_key.pem"))  
                 {  
                      // RSA.ImportParameters(RSAKey);  
-                    encryptedData = RSA.Encrypt(data, DoOAEPPadding); 
-                    Console.WriteLine(Convert.ToBase64String(encryptedData));
-                    // Console.WriteLine(encryptedData);
-                    // Console.WriteLine(Encoding.UTF8.GetString(encryptedData)); 
+                    encryptedData = RSA.Encrypt(data, DoOAEPPadding);
+                    response = Convert.ToBase64String(encryptedData);
                 } 
                 }  
                 catch (CryptographicException e)  
                 {  
-                Console.WriteLine(e.Message); 
-            }  
+                    response = e.Message;
+                }  
+                return response;
         } 
-
-        // static public void RunDecryption(byte[] input)   
+        
+        static public void RunDecryption(String input, bool DoOAEPPadding) {
+            byte[] data = Convert.FromBase64String(input);
+            byte[] decryptedData ;
+            using (RSACryptoServiceProvider RSA = PrivateKeyFromPemFile(@"./keys/private_key.pem"))  
+                {
+                    decryptedData = RSA.Decrypt(data,DoOAEPPadding ) ;
+                    Console.WriteLine(System.Text.Encoding.UTF8.GetString(decryptedData));
+                } 
+        } 
     }
 }
