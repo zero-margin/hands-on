@@ -21,7 +21,10 @@
 
 from Crypto.PublicKey import RSA
 from Crypto.Cipher import PKCS1_OAEP
+from Crypto.Cipher import PKCS1_v1_5
 from Crypto.Hash import SHA256
+from Crypto.Hash import SHA
+from Crypto import Random
 from base64 import b64encode
 from base64 import b64decode
 
@@ -46,11 +49,27 @@ class RSA_Cipher:
     return plaintext
     #return b64decode(plaintext).decode()
 
+  def decrypt_secondary(self,data):
+    ciphertext = b64decode(data.encode())
+    private_key= RSA.import_key(open('./keys/private_key.pem').read())
+    rsa_decryption_cipher = PKCS1_v1_5.new(private_key)
+    dsize = SHA.digest_size
+    sentinel = Random.new().read(15+dsize)
+    plaintext = rsa_decryption_cipher.decrypt(ciphertext, sentinel)
+    return plaintext
+  
+  def encrypt_secondary(self,data):
+    public_key= RSA.import_key(open('./keys/public_key.pem').read())
+    plaintext = b64encode(data.encode('utf-8'))
+    rsa_encryption_cipher = PKCS1_OAEP.new(public_key, hashAlgo=SHA256)
+    ciphertext = rsa_encryption_cipher.encrypt(plaintext)
+    return b64encode(ciphertext).decode()
+
 cipher = RSA_Cipher()
 # cipher.generate_key(1024) #key length can be 1024, 2048 or 4096
 #encryptedData = cipher.encrypt("This is test")
-encryptedData='K7Vd4XkZNd+nMXBCY99pVy2aojpD1DnxhwY3DnV45ikGJpGke2GF7FcObdU4JXQ6rb5ckhHFVAyTCDn/d0BI7chwHNKS/5cDFoiyizBbzXSSKPyE3eFIntwjN7zq/fUgDDFPyWIQUlSLWwWMSQfbJrXT3SInRkSjMUbB4P6a348vwQHFQ2uXuPFp3sGEeLKPMuFmHH2B0d4pMB3RqoH3YMIkcsEJBLOr13aDF8YOs2sE6EQ0OpXEyN+CBQ3qUuwguDi9PEGpud7wH38ks6raeuDenxbRnLgEm12ZDvR88EzTWiLxMSH0hjPSWZl27azMNFj98EvgsOsoZHt6OMCntQ=='
-decryptedData = cipher.decrypt(encryptedData)
+encryptedData='pJsTGcG9DqFZmYb2rQVv9XLLj6EnslUKK8B+gOMA2yXHxOsyQW8+2PS9NZqsMatP5yH4ly/q3jGRJM4X3bgjQM06sId9yoCkfVV+fsoOzA+NpqrPKaRdW+3lM+OkCFVJNgIcs48ofgcW5fCK/iVIBnIbZ2pBoeoJNJte2D5KJtl8colkGUGlFtC3mDxSFDq18BLA6ClFQMGatp0KAwjYsQB568h6RFpE6Q7iN3C2j7y6oXd+GDqSJvoSBIM2y/kAHuLFZb/jAIOZEbvGhkvoyotTiWa0N5/vZdn+3gqxH1DggoDW2bSyGP1aBIayqRPcr5Rn/S9EInT3MLlUiuR/oQ=='
+decryptedData = cipher.decrypt_secondary(encryptedData)
 # print(encryptedData)
 print(decryptedData)
 
