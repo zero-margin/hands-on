@@ -123,6 +123,11 @@ Public Private Key Pair ---> *.pem file
 
 EC2 --> Elastic Cloud Compute :)  [Virtual Server] t2.nano t2.micro
 
+Additonal Links  
+[Putty Download](https://www.putty.org/)  
+[Putty using windows](https://linuxacademy.com/guide/17385-use-putty-to-access-ec2-linux-instances-via-ssh-from-windows/)  
+
+
 
 
 
