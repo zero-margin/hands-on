@@ -82,6 +82,46 @@ Mumbai region ---> 4 (data centers)
 
 2 datacenters Mumbai (AZ1) 2 datacenter are in Pune (AZ2)
 
+**SDN (Software Defined Network)**
+
+The resources provided to your are created on demand and they are a logical seperation of a hardware equipment.
+
+**MTTR**
+
+MTTR is calculated by dividing the total downtime caused by failures by the total number of failures. If, for example, a system fails three times in a month, and the failures resulted in a total of six hours of downtime, the MTTR would be two hours.
+
+MTTR = 6 hours / 3 failures = 2 hours
+
+[Key Matrices](https://www.splunk.com/en_us/data-insider/what-is-mean-time-to-repair.html)
+
+AKIA5SCN4ZYLQIS2XSPR
+zkzUCcN1rqh8OeBlFvfcErWsMI++jweLkOw4xDvR
+
+
+AKIA5SCN4ZYLXOFG44EP
+iTQaCFYykQBb4UuYbcrPHF5H3ErAiutgKdSK7XPo
+
+
+Steps to Install AWS CLi
+
+Windows you are going to download 64-32 bit set up.
+Mac 
+-- pip (Python Installer) aws-cli package
+-- python 3.6 version
+-- Python path was not in the enviroment variable
+-- Hence i was not able to run aws
+-- you have to update the profile
+
+DemoUser ---> 
+ClientID -- AKIA5SCN4ZYLTEKMEZAB
+Secret -- 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
+
+
+Login to a machine - i can create a new pair or use an existing 
+Public Private Key Pair ---> *.pem file
+
+
+EC2 --> Elastic Cloud Compute :)  [Virtual Server] t2.nano t2.micro
 
 
 

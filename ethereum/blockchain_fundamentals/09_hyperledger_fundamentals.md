@@ -123,6 +123,15 @@ a1, a2 and a3 to update the records
 a1 - 0 units
 a2 - 20 units, 0 units
 
+[Hyperledger Composer](https://composer-playground.mybluemix.net/login)
+
+_What Remix to is to Ethereum, Hyperleger Composer it is to hyperledger._
+
+BNA ---> Business Network
+
+sample.cto --> Model --> Actors, transctions, events, assests
+
+participants are role Logistics, Supplier, Buyer
 
 
 
