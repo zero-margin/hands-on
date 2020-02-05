@@ -94,13 +94,6 @@ MTTR = 6 hours / 3 failures = 2 hours
 
 [Key Matrices](https://www.splunk.com/en_us/data-insider/what-is-mean-time-to-repair.html)
 
-AKIA5SCN4ZYLQIS2XSPR
-zkzUCcN1rqh8OeBlFvfcErWsMI++jweLkOw4xDvR
-
-
-AKIA5SCN4ZYLXOFG44EP
-iTQaCFYykQBb4UuYbcrPHF5H3ErAiutgKdSK7XPo
-
 
 Steps to Install AWS CLi
 
@@ -111,10 +104,6 @@ Mac
 -- Python path was not in the enviroment variable
 -- Hence i was not able to run aws
 -- you have to update the profile
-
-DemoUser ---> 
-ClientID -- AKIA5SCN4ZYLTEKMEZAB
-Secret -- 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
 
 
 Login to a machine - i can create a new pair or use an existing 

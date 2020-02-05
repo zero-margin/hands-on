@@ -40,8 +40,10 @@ _A Recovery Time Objective is the maximum amount of time that a system can be do
 ## Scalability
 
 Additonal Links  
-[What is saclability?](https://en.wikipedia.org/wiki/Scalability)  
-[AWS Autoscaling](https://www.youtube.com/watch?v=-hFAWk6hyZA)
+- [What is saclability?](https://en.wikipedia.org/wiki/Scalability)  
+- [AWS Autoscaling](https://www.youtube.com/watch?v=-hFAWk6hyZA)  
+- [AWS S3 FAQ](https://aws.amazon.com/s3/faqs/)  
+- [AWS Documentation](https://docs.aws.amazon.com/index.html?nc2=h_ql_doc_do_v)
 
 ## Elasticity
 
