@@ -32,6 +32,10 @@ Additonal Reading
 - [Edureka: An Introduction to AWS](https://www.edureka.co/blog/what-is-aws/)
 - [Edureka: Cloud Computing Introduction](https://www.edureka.co/blog/amazon-aws-tutorial/)
 - [Elasticity and Scalability](https://medium.com/@pablo.iorio/elasticity-does-not-equal-scalability-246bd9b3c128)
+- [AWS CLI Installation and Configuration](https://www.edureka.co/blog/how-to-use-aws-cli/)
+- [AWS Console: Deep Dive Into AWS Management Interface](https://www.edureka.co/blog/aws-console/)
+- [Putty Download](https://www.putty.org/)  
+- [Putty using windows](https://linuxacademy.com/guide/17385-use-putty-to-access-ec2-linux-instances-via-ssh-from-windows/)  
 
 **Cloud Service Model**
 
