@@ -19,7 +19,7 @@ aws iam list-users
 aws iam list-users --output text
 aws iam list-users --output table
 aws iam list-users --output json  --query 'Users[*].[UserName,Arn,CreateDate,PasswordLastUsed,UserId]'
-aws iam update-user --user awsdemo --new-user-name awssession
+
 
 ```
 ## FAQ
@@ -30,3 +30,18 @@ aws iam update-user --user awsdemo --new-user-name awssession
 **Useful links** <br>
 - [AWS CLI Configurations](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html)
 - [AWS CLI Usage](https://docs.aws.amazon.com/cli/latest/userguide/cli-usage-output.html)
+
+AMI -- Amazon Machine Image
+
+
+arn:aws:iam::932171271703:user/webuser
+
+arn:aws:iam::932171271703:role/service-role/aws-codestar-service-role
+arn:aws:iam::932171271703:role/S3Reader
+arn:aws:iam::932171271703:mfa/webuser 
+
+arn: Amazon Resource Name
+
+aws --> IAM::932171271703:user/webuser
+
+brand:style:Color:Size
