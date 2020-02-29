@@ -61,8 +61,8 @@ An Outpost is a pool of AWS compute and storage capacity deployed at a customer 
 - Network ACLs are stateless, which means that responses to allowed inbound traffic are subject to the rules for outbound traffic (and vice versa).
 
 Futhur Reading
-[IP Address Guide](https://www.ipaddressguide.com/cidr)
-[How Amazon VPC Works](https://docs.aws.amazon.com/vpc/latest/userguide/how-it-works.html)
-[Internet Gateway](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html)
-[VPC Quotas](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html)
-[VPC Examples](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenarios.html)
+- [IP Address Guide](https://www.ipaddressguide.com/cidr)
+- [How Amazon VPC Works](https://docs.aws.amazon.com/vpc/latest/userguide/how-it-works.html)
+- [Internet Gateway](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html)
+- [VPC Quotas](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html)
+- [VPC Examples](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenarios.html)
