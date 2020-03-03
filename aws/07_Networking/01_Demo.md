@@ -66,3 +66,34 @@ Futhur Reading
 - [Internet Gateway](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Internet_Gateway.html)
 - [VPC Quotas](https://docs.aws.amazon.com/vpc/latest/userguide/amazon-vpc-limits.html)
 - [VPC Examples](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Scenarios.html)
+
+
+10.0.0.0  -> 10.0.0.255 (256 Machines)
+10.0.1.2  -> 10.0.1.0, 10.0.1.1  --> 10.0.1.255
+255.255.255.255
+
+1025/256 = 6
+
+10.0.0.1 -> 10.0.0.255 (256)    
+10.0.1.0 -> 10.0.1.255 (256)
+10.0.2.0 -> 10.0.2.255 (256)
+10.0.3.0 -> 10.0.3.255 (256)
+
+
+DemoSession VPC1 - 10.3.0.0/16
+
+10.3.0.0/16
+10.4.0.0/16
+
+# Further Reading
+
+- [VPC](https://docs.aws.amazon.com/vpc/latest/userguide/what-is-amazon-vpc.html)
+- [VPC Architecture](https://docs.aws.amazon.com/quickstart/latest/vpc/architecture.html)
+- [AWS Global Infrasturcture](https://aws.amazon.com/about-aws/global-infrastructure/?p=ngi&loc=1)
+- [AWS Outpost](https://docs.aws.amazon.com/outposts/latest/userguide/what-is-outposts.html)
+- [AWS S3 Security Best Practices](https://docs.aws.amazon.com/AmazonS3/latest/dev/security-best-practices.html)
+- [AWS S3 Replication Cost](https://aws.amazon.com/blogs/storage/monitor-data-transfer-costs-related-to-amazon-s3-replication/)
+- [AWS S3 Performance Guideline](https://docs.aws.amazon.com/AmazonS3/latest/dev/optimizing-performance-guidelines.html)
+- [AWS S3 Performance Design Pattern](https://docs.aws.amazon.com/AmazonS3/latest/dev/optimizing-performance-design-patterns.html)
+- [AWS S3 Replication](https://aws.amazon.com/s3/features/replication/#Amazon_S3_Cross-Region_Replication_.28CRR.29)
+- [AWS S3 Storage Classes](https://aws.amazon.com/s3/storage-classes/?nc=sn&loc=3)
